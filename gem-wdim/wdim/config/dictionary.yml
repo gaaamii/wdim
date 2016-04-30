@@ -1,0 +1,15 @@
+# THIS DICTIONARY HAS ONLY ACRONYMS or SPECIAL JARGONS.
+# Therefore commands like "history", "touch", or "top" will not be included here.
+
+wdim:
+  what does it mean
+man:
+  manual pages
+pwd:
+  print working directory
+cd:
+  change directory
+vim:
+  vi improved
+ls:
+  list segments
