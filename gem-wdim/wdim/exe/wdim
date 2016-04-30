@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require 'wdim'
-
-Wdim::CLI.new.start(ARGV)
