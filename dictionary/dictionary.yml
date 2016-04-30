@@ -6,10 +6,16 @@ dictionary:
     what does it mean
   man:
     manual pages
+  mkdir:
+    make directory
   pwd:
     print working directory
+  cat:
+    catenate
   cd:
     change directory
+  chmod:
+    change mode
   vim:
     vi improved
   ls:
