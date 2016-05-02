@@ -1,5 +1,7 @@
 # Wdim
 
+Wdim is a command line tool to get what the commands mean.
+
 ## Installation
 
 Add this line to your application's Gemfile:
