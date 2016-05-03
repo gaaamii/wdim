@@ -19,7 +19,7 @@ Or install it yourself as:
     $ gem install wdim
 
 ## Usage
-Type a command as an arg, get what does it mean.
+Type a command as an arg, get what the command mean.
 
 ![](https://i.gyazo.com/1724adc20daa697fd17aef8ca273ccc0.gif)
 
