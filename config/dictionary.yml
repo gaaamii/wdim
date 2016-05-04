@@ -19,3 +19,7 @@ vim:
   vi improved
 ls:
   list segments
+tar: 
+  tape archives 
+curl: 
+  client for urls
