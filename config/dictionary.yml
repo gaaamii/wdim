@@ -23,3 +23,11 @@ tar:
   tape archives 
 curl: 
   client for urls
+grep:
+  global regular expressions print
+sed:
+  stream editor
+ln:
+  link
+bash:
+  bourne-again shell
