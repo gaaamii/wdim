@@ -31,3 +31,5 @@ ln:
   link
 bash:
   bourne-again shell
+dig:
+  domain information groper
