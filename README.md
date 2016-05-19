@@ -1,5 +1,7 @@
 # Wdim
 
+[![Build Status](https://travis-ci.org/gaaamii/wdim.png)](https://travis-ci.org/gaaamii/wdim)
+
 Wdim is a command line tool to get what the commands mean.
 
 ## Installation
