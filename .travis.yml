@@ -1,4 +1,14 @@
 language: ruby
 rvm:
-  - 2.2.3
+- 2.2.3
 before_install: gem install bundler -v 1.11.2
+script: rake spec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: HlenAIjIFxu285JGMplzqLuEiMqPJIwzZZ4UaSemMQLj+lgjGzam1W/trgDuJnH6LSfPmEvxOJFFBeKXgBAs0EaFE2arrnUMXrcyf5lnhwVROvLPjF1ZOCM8AGmbpnPvUg25ccTYdCJ8+a67e+jzpcIaITDIaVu6BG17JHuTvP7qWrDQqflCM1ALrduowtTHaPe9CUzPv4cK9H9b9F2t01LirJk8SJfdTbA8ahoeL+bIT+7C1LGTEidvbNImX+AfITGVvqpyIJhRMTapzMjSmNw/pnRlWECiOCNOqjbBmuL0VGcfOPl4/wmaw1dXXjx88FZq+lQy5p6w0xR+XGJ8VzZT5G2G9m38S242bsXWGDlxFFTWRJi917y4ahE6411LnoG/2JxSd3hFPeC1ZVhdbxydK8UvYnP7EP7dZ6WupdmzQPjENv+EbKflrM+/q77JeL/aQJsaOFVxzttP+WcgAFbY0eJe77r7ocsQ1el4B4K8WV5Ag5dld6+0seaDHbeze7deGfW+/p5q/PvbslwgmgSrESPmmOub/0vftVl8ZHEqw5yUO3pAE0QO2jTF3XHs7S3OLxivOLJL4abIvuBL1rZBwVjLHzQNP/HSQ1gjiNCNs5wgiEo28Pq7PZ0bJ0WITS8kFg3Ym+KTk/w6gM2fZU8J9/KdV05UyEppPL3PcHI=
+  gem: wdim
+  on:
+    tags: true
+    repo: gaaamii/wdim
+    # branch: Travis CI will automatically figure out which branches to release from. Otherwise, it will only release from your master branch. 
