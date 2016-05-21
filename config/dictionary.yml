@@ -31,3 +31,9 @@ ln:
   link
 bash:
   bourne-again shell
+ssh:
+  secure shell
+dig:
+  domain information groper
+yum:
+  Yellowdog Updater, Modified
