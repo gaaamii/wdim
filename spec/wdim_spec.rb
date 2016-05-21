@@ -19,25 +19,9 @@ describe Wdim do
       expect(@wdim_cli.search("cd")).to eq "change directory"
     end
 
-    context 'when decoratable' do
-      it '#print_meaning(term)' do
-        @wdim_cli.decoratable = true
-        expected_string = ("-" * 40) + "\n\tchange directory\t\n" + ("-" * 40) 
-        expect(@wdim_cli.print_meaning("cd")).to eq expected_string
-      end
-    end
-
-    context 'when not decoratable' do
-      it '#print_meaning(term)' do
-        @wdim_cli.decoratable = false
-        expected_string = "change directory"
-        expect(@wdim_cli.print_meaning("cd")).to eq expected_string
-      end
-    end
-
     it '#start(argv)' do
       argv = %w(cd hoge fuga)
-      expect(@wdim_cli.start(argv)).to eq "change directory"
+      expect { @wdim_cli.start(argv) }.to output("change directory\n").to_stdout
     end
 
     it '#decorate(meaning)' do
@@ -45,5 +29,22 @@ describe Wdim do
       expect(@wdim_cli.decorate("change directory")).to eq expected_string
     end
 
+    describe "#print_meaning" do
+      context 'when decoratable' do
+        it 'print meaning of the term with decoration' do
+          @wdim_cli.decoratable = true
+          expected_string = ("-" * 40) + "\n\tchange directory\t\n" + ("-" * 40) + "\n"
+          expect { @wdim_cli.print_meaning("cd") }.to output(expected_string).to_stdout
+        end
+      end
+
+      context 'when not decoratable' do
+        it 'just prints meaning of the term without decoration' do
+          @wdim_cli.decoratable = false
+          expected_string = "change directory\n"
+          expect { @wdim_cli.print_meaning("cd") }.to output(expected_string).to_stdout
+        end
+      end
+    end
   end
 end
