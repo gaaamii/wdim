@@ -13,7 +13,17 @@ module Wdim
 
     def start(argv)
       # TODO: parse args and use as options
+      return repl if argv.empty?
       print_meaning(argv[0])
+    end
+
+    def repl
+      @decoratable = true
+      loop do
+        print "> "
+        typed_string = gets.chomp
+        typed_string =~ /(exit|quit)/ ? break : print_meaning(typed_string)
+      end
     end
 
     def print_meaning(term)
@@ -25,9 +35,6 @@ module Wdim
     end
 
     def decorate(meaning)
-      # TODO: more decorations
-      # 作業中にパッと目につく感じにしたいけど、そうすると grep `wdim cd` dictionary.yml みたいな使い方ができなくなる
-      # .wdimrc あるいはオプションで指定したい
       "----------------------------------------\n\t#{meaning}\t\n----------------------------------------"
     end
     

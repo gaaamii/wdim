@@ -19,9 +19,18 @@ describe Wdim do
       expect(@wdim_cli.search("cd")).to eq "change directory"
     end
 
-    it '#start(argv)' do
-      argv = %w(cd hoge fuga)
-      expect { @wdim_cli.start(argv) }.to output("change directory\n").to_stdout
+    describe '#start(argv)' do
+      # context "Without any argument" do
+        # it "starts wdim in repl mode" do
+        #   # I DON'T KNOW HOW I WRITE SPEC FOR REPL
+        # end
+      # end
+      context "With arguments" do
+        it "parses an argument, then prints meaning" do
+          argv = %w(cd hoge fuga)
+          expect { @wdim_cli.start(argv) }.to output("change directory\n").to_stdout
+        end
+      end
     end
 
     it '#decorate(meaning)' do
@@ -39,7 +48,7 @@ describe Wdim do
       end
 
       context 'when not decoratable' do
-        it 'just prints meaning of the term without decoration' do
+        it 'prints the meaning of its term without decoration' do
           @wdim_cli.decoratable = false
           expected_string = "change directory\n"
           expect { @wdim_cli.print_meaning("cd") }.to output(expected_string).to_stdout

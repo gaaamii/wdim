@@ -36,4 +36,10 @@ ssh:
 dig:
   domain information groper
 yum:
-  Yellowdog Updater, Modified
+  yellowdog updater, modified
+du:
+  disc usage
+df:
+  disk free
+telnet:
+  teletype network
