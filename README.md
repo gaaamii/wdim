@@ -21,6 +21,7 @@ Or install it yourself as:
     $ gem install wdim
 
 ## Usage
+
 Type a command as an arg, get what the command mean.
 
 ![](https://i.gyazo.com/1724adc20daa697fd17aef8ca273ccc0.gif)
@@ -30,6 +31,27 @@ $ wdim wdim
 what does it mean
 $ wdim cd
 change directory
+```
+
+### REPL Mode
+![REPL Mode](https://bot.gyazo.com/06a9a4eb613ff1e9206948d03ff75571.gif)
+
+Start wdim as REPL mode.
+
+```sh
+$ wdim
+> ls
+----------------------------------------
+list segments 
+----------------------------------------
+> dig
+----------------------------------------
+domain information groper 
+----------------------------------------
+> telnet
+----------------------------------------
+ teletype network  
+----------------------------------------
 ```
 
 ## Development
